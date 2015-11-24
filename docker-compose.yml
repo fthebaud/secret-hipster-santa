@@ -1,0 +1,11 @@
+jhipster-dev-postgresql:
+  container_name: secretSanta-dev-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  # - ~/volumes/jhipster/secretSanta/dev-postgresql/:/var/lib/postgresql/
+  environment:
+  - POSTGRES_USER=secretSanta
+  - POSTGRES_PASSWORD=
+  ports:
+  - "5432:5432"
+
