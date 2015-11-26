@@ -1,9 +1,5 @@
 # Changelog
 
-## v 0.3.1-dev
-
-- Fixed #504 (input-lg and input-sm classes now work)
-
 ## v 0.3.0
 
 - Implemented full color palette from Material Design specifications (thanks @korgan00)
@@ -20,7 +16,7 @@
 - Improved shadows to better fit Material Design specs
 - Improved hover state of buttons
 - Material Checkboxes now are a single inline element `.checkbox-material`, this helps when you need to vertical align them
-- Fixed Material Design icons (thanks @jmillspaysbills and @GradyD)
+- Fixed Material Design icons
 - Fixed behavior of floating labels and inputs
 - Fixed several bugs
 - Updated Meteor packages

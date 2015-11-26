@@ -1,11 +1,3 @@
-.btn-shadow() {
-  .shadow-z-1();
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  &:active:not(.btn-link) {
-    .shadow-z-1-hover();
-  }
-}
-
 .btn {
   position: relative;
   padding: 8px 30px;
@@ -32,30 +24,25 @@
   .background-variations(~":not(.btn-link):not(.btn-flat)", @btn-default);
 
   // BTN hover effect
-  // SASS conversion note: please mirror any content change in _mixins-shared.scss button-variations-content
   .generic-variations(~":hover:not(.btn-link):not(.btn-flat)", @btn-default, {
-    background-color: contrast(@mdb-color, darken(@mdb-color, 4%), lighten(@mdb-color, 4%), @contrast-factor);
+    background-color: contrast(@material-color, darken(@material-color, 4%), lighten(@material-color, 4%), @contrast-factor);
   });
   // BTN active effect
-  // SASS conversion note: please mirror any content change in _mixins-shared.scss button-variations-content
   .generic-variations(~":active:not(.btn-link):not(.btn-flat)", @btn-default, {
-    background-color: contrast(@mdb-color, darken(@mdb-color, 6%), lighten(@mdb-color, 6%), @contrast-factor);
+    background-color: contrast(@material-color, darken(@material-color, 6%), lighten(@material-color, 6%), @contrast-factor);
   });
   // BTN .active effect
-  // SASS conversion note: please mirror any content change in _mixins-shared.scss button-variations-content
   .generic-variations(~".active:not(.btn-link):not(.btn-flat)", @btn-default, {
-    background-color: contrast(@mdb-color, darken(@mdb-color, 6%), lighten(@mdb-color, 6%), @contrast-factor);
+    background-color: contrast(@material-color, darken(@material-color, 6%), lighten(@material-color, 6%), @contrast-factor);
   });
   // BTN flat hover effect
-  // SASS conversion note: please mirror any content change in _mixins-shared.scss bg-color-variations-content
-  .generic-variations(~".btn-flat:hover:not(.btn-link)", @btn-default, {
-    background-color: fade(@mdb-color, 20%);
+  .generic-variations(~".btn-flat:hover:not(.btn-ink)", @btn-default, {
+    background-color: fade(@material-color, 20%);
   });
 
 }
 
-.btn,
-.input-group-btn .btn {
+.btn {
   &.btn-flat {
     background: none;
     box-shadow: none;
@@ -93,20 +80,18 @@
     &:active {
       .shadow-z-1-hover();
     }
-    &,
-    .ripple-wrapper {
+    &, .ripple-wrapper {
       border-radius: 100%;
     }
     &.btn-fab-mini {
       width: 40px;
       height: 40px;
-      padding: 13px 0;
+      padding: 13px;
       font-size: 15px;
     }
     i {
       position: relative;
       top: -5px;
-      margin: 0 auto;
     }
   }
 }
@@ -148,4 +133,12 @@
 }
 .btn-group-flat {
   box-shadow: none !important;
+}
+
+.btn-shadow() {
+  .shadow-z-1();
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  &:active:not(.btn-link) {
+    .shadow-z-1-hover();
+  }
 }
